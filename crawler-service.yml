@@ -1,0 +1,11 @@
+server:
+  port: 9000
+
+
+spring:
+  rabbitmq:
+    host: localhost
+    username: admin
+    password: admin
+info:
+  message: kenobi

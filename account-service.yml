@@ -1,0 +1,23 @@
+security:
+  oauth2:
+    client:
+      clientId: account-service
+      clientSecret: test
+      accessTokenUri: http://localhost:5000/uaa/oauth/token
+      grant-type: client_credentials
+      scope: server
+    resource:
+      user-info-uri: dummy
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      username: user
+      password: test
+      database: iosr
+      port: 27017
+
+server:
+  context-path: /accounts
+  port: 12000

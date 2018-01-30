@@ -1,0 +1,41 @@
+server:
+  port: 8765
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+spring:
+  rabbitmq:
+    host: localhost
+    username: admin
+    password: admin
+
+zuul:
+  ignoredServices: "*"
+  routes:
+    main:
+      path: /main/**
+      serviceId: aggregate-service
+#      stripPrefix: false
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 500000
+
+ribbon:
+  ReadTimeout: 600000
+  ConnectTimeout: 600000
+  eureka:
+    enabled: true
+
+
+

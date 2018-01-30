@@ -1,0 +1,9 @@
+server:
+  port: 10000
+
+
+spring:
+  rabbitmq:
+    host: localhost
+    username: admin
+    password: admin
