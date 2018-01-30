@@ -8,4 +8,4 @@ spring:
     username: admin
     password: admin
 info:
-  message: kenobi
+  message: general
